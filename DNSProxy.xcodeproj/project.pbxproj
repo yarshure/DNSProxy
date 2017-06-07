@@ -12,7 +12,36 @@
 		69B3076B1EE7971000FA8E79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69B307691EE7971000FA8E79 /* Main.storyboard */; };
 		69B3076D1EE7971000FA8E79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69B3076C1EE7971000FA8E79 /* Assets.xcassets */; };
 		69B307701EE7971000FA8E79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69B3076E1EE7971000FA8E79 /* LaunchScreen.storyboard */; };
+		69B3077E1EE7977F00FA8E79 /* AppProxyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B3077D1EE7977F00FA8E79 /* AppProxyProvider.swift */; };
+		69B307831EE7977F00FA8E79 /* DNS.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 69B3077B1EE7977F00FA8E79 /* DNS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		69B3078A1EE798E600FA8E79 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B307891EE798E600FA8E79 /* NetworkExtension.framework */; };
+		69B3078B1EE7990A00FA8E79 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B307891EE798E600FA8E79 /* NetworkExtension.framework */; };
+		69B3078F1EE79C3400FA8E79 /* SFNEDNSProxyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B3078E1EE79C3400FA8E79 /* SFNEDNSProxyProvider.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		69B307811EE7977F00FA8E79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69B3075A1EE7971000FA8E79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69B3077A1EE7977F00FA8E79;
+			remoteInfo = DNS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		69B307871EE7977F00FA8E79 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				69B307831EE7977F00FA8E79 /* DNS.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		69B307621EE7971000FA8E79 /* DNSProxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DNSProxy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +51,13 @@
 		69B3076C1EE7971000FA8E79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69B3076F1EE7971000FA8E79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69B307711EE7971000FA8E79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69B3077B1EE7977F00FA8E79 /* DNS.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DNS.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		69B3077D1EE7977F00FA8E79 /* AppProxyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProxyProvider.swift; sourceTree = "<group>"; };
+		69B3077F1EE7977F00FA8E79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69B307801EE7977F00FA8E79 /* DNS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DNS.entitlements; sourceTree = "<group>"; };
+		69B307891EE798E600FA8E79 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		69B3078C1EE7990A00FA8E79 /* DNSProxy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DNSProxy.entitlements; sourceTree = "<group>"; };
+		69B3078E1EE79C3400FA8E79 /* SFNEDNSProxyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFNEDNSProxyProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +65,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69B3078B1EE7990A00FA8E79 /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69B307781EE7977F00FA8E79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69B3078A1EE798E600FA8E79 /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,7 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				69B307641EE7971000FA8E79 /* DNSProxy */,
+				69B3077C1EE7977F00FA8E79 /* DNS */,
 				69B307631EE7971000FA8E79 /* Products */,
+				69B307881EE798E600FA8E79 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -47,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				69B307621EE7971000FA8E79 /* DNSProxy.app */,
+				69B3077B1EE7977F00FA8E79 /* DNS.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,6 +102,7 @@
 		69B307641EE7971000FA8E79 /* DNSProxy */ = {
 			isa = PBXGroup;
 			children = (
+				69B3078C1EE7990A00FA8E79 /* DNSProxy.entitlements */,
 				69B307651EE7971000FA8E79 /* AppDelegate.swift */,
 				69B307671EE7971000FA8E79 /* ViewController.swift */,
 				69B307691EE7971000FA8E79 /* Main.storyboard */,
@@ -62,6 +111,25 @@
 				69B307711EE7971000FA8E79 /* Info.plist */,
 			);
 			path = DNSProxy;
+			sourceTree = "<group>";
+		};
+		69B3077C1EE7977F00FA8E79 /* DNS */ = {
+			isa = PBXGroup;
+			children = (
+				69B3077D1EE7977F00FA8E79 /* AppProxyProvider.swift */,
+				69B3078E1EE79C3400FA8E79 /* SFNEDNSProxyProvider.swift */,
+				69B3077F1EE7977F00FA8E79 /* Info.plist */,
+				69B307801EE7977F00FA8E79 /* DNS.entitlements */,
+			);
+			path = DNS;
+			sourceTree = "<group>";
+		};
+		69B307881EE798E600FA8E79 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69B307891EE798E600FA8E79 /* NetworkExtension.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,15 +142,34 @@
 				69B3075E1EE7971000FA8E79 /* Sources */,
 				69B3075F1EE7971000FA8E79 /* Frameworks */,
 				69B307601EE7971000FA8E79 /* Resources */,
+				69B307871EE7977F00FA8E79 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				69B307821EE7977F00FA8E79 /* PBXTargetDependency */,
 			);
 			name = DNSProxy;
 			productName = DNSProxy;
 			productReference = 69B307621EE7971000FA8E79 /* DNSProxy.app */;
 			productType = "com.apple.product-type.application";
+		};
+		69B3077A1EE7977F00FA8E79 /* DNS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69B307841EE7977F00FA8E79 /* Build configuration list for PBXNativeTarget "DNS" */;
+			buildPhases = (
+				69B307771EE7977F00FA8E79 /* Sources */,
+				69B307781EE7977F00FA8E79 /* Frameworks */,
+				69B307791EE7977F00FA8E79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DNS;
+			productName = DNS;
+			productReference = 69B3077B1EE7977F00FA8E79 /* DNS.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -96,6 +183,22 @@
 				TargetAttributes = {
 					69B307611EE7971000FA8E79 = {
 						CreatedOnToolsVersion = 9.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.NetworkExtensions = {
+								enabled = 1;
+							};
+						};
+					};
+					69B3077A1EE7977F00FA8E79 = {
+						CreatedOnToolsVersion = 9.0;
+						SystemCapabilities = {
+							com.apple.NetworkExtensions = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -113,6 +216,7 @@
 			projectRoot = "";
 			targets = (
 				69B307611EE7971000FA8E79 /* DNSProxy */,
+				69B3077A1EE7977F00FA8E79 /* DNS */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +232,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		69B307791EE7977F00FA8E79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -140,7 +251,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		69B307771EE7977F00FA8E79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69B3077E1EE7977F00FA8E79 /* AppProxyProvider.swift in Sources */,
+				69B3078F1EE79C3400FA8E79 /* SFNEDNSProxyProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		69B307821EE7977F00FA8E79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69B3077A1EE7977F00FA8E79 /* DNS */;
+			targetProxy = 69B307811EE7977F00FA8E79 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		69B307691EE7971000FA8E79 /* Main.storyboard */ = {
@@ -268,7 +396,9 @@
 		69B307751EE7971000FA8E79 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DNSProxy/DNSProxy.entitlements;
 				DEVELOPMENT_TEAM = 745WQDK4L7;
 				INFOPLIST_FILE = DNSProxy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -282,12 +412,44 @@
 		69B307761EE7971000FA8E79 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DNSProxy/DNSProxy.entitlements;
 				DEVELOPMENT_TEAM = 745WQDK4L7;
 				INFOPLIST_FILE = DNSProxy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yarshure.Surf.DNSProxy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		69B307851EE7977F00FA8E79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DNS/DNS.entitlements;
+				DEVELOPMENT_TEAM = 745WQDK4L7;
+				INFOPLIST_FILE = DNS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yarshure.Surf.DNSProxy.DNS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		69B307861EE7977F00FA8E79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DNS/DNS.entitlements;
+				DEVELOPMENT_TEAM = 745WQDK4L7;
+				INFOPLIST_FILE = DNS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yarshure.Surf.DNSProxy.DNS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -312,6 +474,16 @@
 				69B307761EE7971000FA8E79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69B307841EE7977F00FA8E79 /* Build configuration list for PBXNativeTarget "DNS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69B307851EE7977F00FA8E79 /* Debug */,
+				69B307861EE7977F00FA8E79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
